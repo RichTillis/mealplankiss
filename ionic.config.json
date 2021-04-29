@@ -1,0 +1,7 @@
+{
+  "name": "meal-plan-kiss",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
