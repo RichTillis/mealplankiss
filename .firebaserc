@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "mealomatic-cf648": {
+      "hosting": {
+        "app": [
+          "mealomatic-cf648"
+        ]
+      }
+    }
+  }
+}

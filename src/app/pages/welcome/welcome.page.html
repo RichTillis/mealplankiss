@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>welcome</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="secondary" (click)="logout()" *ngIf="(isFullyAuthenticated$ | async)">
+        <ion-icon name="log-out" slot="start"></ion-icon>logout
+      </ion-button>
+      <ion-button color="secondary" (click)="login()" *ngIf="!(isFullyAuthenticated$ | async)">
+        <ion-icon name="log-in" slot="start"></ion-icon>Login
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+
+  <div *ngIf="(isFullyAuthenticated$ | async)">
+    Fully Authenticated!
+  </div>
+
+  <div *ngIf="!(isFullyAuthenticated$ | async)">
+    NOT Fully Authenticated!
+  </div>
+</ion-content>
