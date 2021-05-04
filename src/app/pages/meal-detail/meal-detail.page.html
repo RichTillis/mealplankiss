@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title *ngIf="meal">{{meal.title}}</ion-title>
+    <ion-title *ngIf="!meal">Make a new meal!</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="secondary" (click)="closeModal()">
+        <ion-icon name="close-circle-outline" size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content  class="ion-padding">
+  <form novalidate [formGroup]="mealForm" (ngSubmit)="createMeal()">
+    <ion-item>
+      <ion-label position="stacked">What do you want to call this meal?</ion-label>
+      <ion-input formControlName="title" placeholder="(required)" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Describe it</ion-label>
+      <ion-input formControlName="description"  type="text"></ion-input>
+    </ion-item>
+
+    <ion-button type="submit" [disabled]="mealForm.invalid" expand="block" *ngIf="meal">Update Meal</ion-button>
+    <ion-button type="button" [disabled]="mealForm.invalid" expand="block" *ngIf="meal" color="danger" (click)="deleteMeal()">Delete Meal</ion-button>
+
+    <ion-button type="submit" [disabled]="mealForm.invalid" expand="block" *ngIf="!meal">Create Meal</ion-button>
+
+  </form>
+</ion-content>

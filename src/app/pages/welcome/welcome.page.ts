@@ -13,7 +13,7 @@ export class WelcomePage implements OnInit {
   ngOnInit() {  }
 
   login() {
-    this.authService.login('welcome');
+    this.authService.login();
   }
 
   logout() {

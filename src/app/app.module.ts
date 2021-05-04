@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
@@ -24,6 +25,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
     IonicModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
     Auth0Module.forRoot({ ...env.auth }),
     AngularFireModule.initializeApp(env.firebaseConfig),
     AngularFireAuthModule,

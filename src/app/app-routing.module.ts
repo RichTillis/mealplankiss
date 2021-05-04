@@ -12,6 +12,10 @@ const routes: Routes = [
     path: 'welcome',
     loadChildren: () => import('./pages/welcome/welcome.module').then( m => m.WelcomePageModule)
   },
+  {
+    path: 'meal-detail',
+    loadChildren: () => import('./pages/meal-detail/meal-detail.module').then( m => m.MealDetailPageModule)
+  },
   // {
   //   path: '',
   //   redirectTo: 'welcome',

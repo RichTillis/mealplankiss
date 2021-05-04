@@ -1,11 +1,5 @@
 {
-  "targets": {
-    "mealomatic-cf648": {
-      "hosting": {
-        "app": [
-          "mealomatic-cf648"
-        ]
-      }
-    }
+  "projects": {
+    "default": "meal-plan-kiss"
   }
 }
